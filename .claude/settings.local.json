@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Recurse -Depth 2 | Select-Object FullName, Mode | Where-Object { $_.Mode -notmatch 'd' } | ForEach-Object { $_.FullName.Substring\\(\\(Get-Location\\).Path.Length + 1\\) })",
+      "PowerShell(python -c \"import docx; print\\('python-docx is available'\\)\" 2>&1)"
+    ]
+  }
+}
